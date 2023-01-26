@@ -1,5 +1,7 @@
 # DOM Manipulation - Counter and Timer
 
+The live link can be accessed here -> [Live link](https://soumik43.github.io/DOM-Manipulation-CS/)
+
 This is a simple timer and counter application using DOM manipulation techniques.
 
 The styling is functional and self explanatory.
