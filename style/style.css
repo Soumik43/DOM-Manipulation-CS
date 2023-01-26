@@ -1,0 +1,23 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.toggleSwitch {
+    margin-top: 7rem;
+    margin-bottom: 7%;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+}

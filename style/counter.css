@@ -1,0 +1,10 @@
+.countValue {
+    font-size: 1.25rem;
+}
+
+.buttons {
+    margin: 0 0.6rem;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+}

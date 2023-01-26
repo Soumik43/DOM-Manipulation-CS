@@ -10,15 +10,17 @@ function createCounter() {
 
     counterContainer.classList.add("counterContainer");
     counterHeader.classList.add("counterHeader");
-    countValue.classList.add("CountValue");
+    countValue.classList.add("countValue");
+    incrementButton.classList.add("buttons");
     incrementButton.classList.add("increment");
+    decrementButton.classList.add("buttons");
     decrementButton.classList.add("decrement");
     buttonContainer.classList.add("buttonContainer");
 
     incrementButton.innerText = "+";
     decrementButton.innerText = "-";
     counterHeader.innerText = "Counter";
-    countValue.innerText = `Count is ${count}`;
+    countValue.innerHTML = `<p>Count is <b>${count}</b></p>`;
 
     function incrementCount() {
         count++;
@@ -43,4 +45,4 @@ function createCounter() {
     counterContainer.appendChild(buttonContainer);
 
     container.appendChild(counterContainer);
-};
+}

@@ -10,7 +10,9 @@ function createTimer() {
     timerHeader.classList.add("timerHeader");
     timerValue.classList.add("timerValue");
     buttonContainer.classList.add("timerButtons");
+    startButton.classList.add("buttons");
     startButton.classList.add("startButton");
+    stopButton.classList.add("buttons");
     stopButton.classList.add("stopButton");
 
     timerHeader.innerText = "Timer";
@@ -23,7 +25,7 @@ function createTimer() {
     let min = 0;
     let sec = 0;
 
-    timerValue.innerText = `${hr}:${min}:${sec}`;
+    timerValue.innerText = `0${hr}:0${min}:0${sec}`;
 
     function updateTimer() {
         sec++;
@@ -35,7 +37,10 @@ function createTimer() {
                 min = 0;
             }
         }
-        timerValue.innerText = `${hr}:${min}:${sec}`;
+        const formattedHr = hr < 10 ? `0${hr}` : `${hr}`;
+        const formattedMin = min < 10 ? `0${min}` : `${min}`;
+        const formattedSec = sec < 10 ? `0${sec}` : `${sec}`;
+        timerValue.innerText = `${formattedHr}:${formattedMin}:${formattedSec}`;
     }
 
     startButton.onclick = function () {
@@ -54,7 +59,7 @@ function createTimer() {
         hr = 0;
         min = 0;
         sec = 0;
-        timerValue.innerText = `${hr}:${min}:${sec}`;
+        timerValue.innerText = `0${hr}:0${min}:0${sec}`;
     };
 
     buttonContainer.appendChild(startButton);

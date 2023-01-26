@@ -1,0 +1,15 @@
+.timerHeader {
+    margin: 0.25rem;
+}
+
+.timerValue {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    margin: 0 0.6rem;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+}
