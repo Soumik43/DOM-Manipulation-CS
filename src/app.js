@@ -1,41 +1,29 @@
-let count = 0;
-const countValue = document.getElementById("countValue");
-const incbutton = document.getElementById("increment");
-const decbutton = document.getElementById("decrement");
+const rootBody = document.getElementById("root");
 
-let incrementCounter = () => {
-    count++;
-    displayCount();
-};
+const buttonRow = document.createElement("div");
+const container = document.createElement("div");
+const toggleSwitch = document.createElement("button");
 
-let decrementCounter = () => {
-    count--;
-    displayCount();
-};
+toggleSwitch.classList.add("toggleSwitch");
 
-incbutton.onclick = incrementCounter;
-decbutton.onclick = decrementCounter;
+// False -> Timer mode is on
+// True -> Counter mode is on
+let mode = true;
+function toggleMode() {
+    mode = !mode;
+    if (mode) {
+        toggleSwitch.innerText = "Counter";
+        container.innerHTML = "";
+        createCounter();
+    } else {
+        toggleSwitch.innerText = "Timer";
+        container.innerHTML = "";
+        createTimer();
+    }
+}
 
-let displayCount = () => (countValue.innerText = `Count : ${count}`);
+toggleSwitch.onclick = toggleMode;
 
-let createCounter = () => {
-    const containerClass = document.createElement("div");
-    const counterHeading = document.createElement("h1");
-    const para = document.createElement('p')
-    const incButton = document.createElement('button')
-    const decButton = document.createElement('button')
-    container.classList.add('counterContainer')
-    counterHeading.classList.add('counterHeading')
-    
-    incButton.id = "increment";
-    decButton.id = "decrement";
-    incButton.innerText = "+";
-    decButton.innerText = "-";
-    incbutton.onclick = incrementCounter;
-    decButton.onclick = decrementCounter;
-    const container = document.querySelector(".counterContainer");
-    container.appendChild(incButton);
-    container.appendChild(decButton);
-};
-
-createCounter();
+rootBody.appendChild(toggleSwitch);
+rootBody.appendChild(container);
+toggleMode();
