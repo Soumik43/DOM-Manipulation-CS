@@ -12,11 +12,11 @@ let mode = true;
 function toggleMode() {
     mode = !mode;
     if (mode) {
-        toggleSwitch.innerText = "Counter";
+        toggleSwitch.innerText = "Timer";
         container.innerHTML = "";
         createCounter();
     } else {
-        toggleSwitch.innerText = "Timer";
+        toggleSwitch.innerText = "Counter";
         container.innerHTML = "";
         createTimer();
     }
